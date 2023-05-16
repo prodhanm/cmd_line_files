@@ -1,0 +1,99 @@
+tree cmd line - produces the entire line of directories, their files, subdirectories and it's child files. The root directory is the main parent directory. Every directory and files listed under root, are the child directories and files. Each child directory is a parent to thier respective child directories and files. 
+
+cmd: tree
+result: see below
+
+── cmd_line_ref
+    ├── cmd_line_1.txt
+    └── linux_root_directory.txt
+
+1 directory, 2 files
+
+Analysis:
+
+cmd_line_ref: parent directory: folder
+cmd_line_1.txt: child; file
+linux_root_directory.txt: same as 15
+
+what is in the root file?
+The root file consists of system files that allow for the Linux OS and its distros, i.e. ubuntu,
+to be housed, in order for the OS to operate. It also contains the binary (bin) directory and files that allow for the distro to operate applications. Without the bin directory, no applications could run and wihtout a root directory, there would be no bin directory and no applications would be read into the system. 
+
+bin: the purpose of the bin directory is to have a binary file of an application, in order for the application's binary code to communicate with the Linux kernel. This allows the machine to know that the applicaton running executes the boot file, which will allow the application to run at the human readable version. All data exists, when a binary version exists. 
+
+What directories exist in the root directory?
+mprodhan@mprodhan-XPS-15-9520:/$ ls -l
+total 76
+lrwxrwxrwx   1 root root     7 Mar 20 06:13 bin -> usr/bin
+drwxr-xr-x   4 root root  4096 May  3 12:17 boot
+drwxrwxr-x   2 root root  4096 Mar 20 06:16 cdrom
+drwxr-xr-x  21 root root  5800 May 14 09:33 dev
+drwxr-xr-x 132 root root 12288 May 10 06:32 etc
+drwxr-xr-x   4 root root  4096 Mar 20 06:16 home
+lrwxrwxrwx   1 root root     7 Mar 20 06:13 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Mar 20 06:13 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Mar 20 06:13 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Mar 20 06:13 libx32 -> usr/libx32
+drwx------   2 root root 16384 Mar 20 06:13 lost+found
+drwxr-xr-x   3 root root  4096 Mar 20 12:32 media
+drwxr-xr-x   2 root root  4096 Aug  9  2022 mnt
+drwxr-xr-x   2 root root  4096 Aug  9  2022 opt
+dr-xr-xr-x 449 root root     0 May 14 09:33 proc
+drwx------   5 root root  4096 Mar 20 07:00 root
+drwxr-xr-x  38 root root   980 May 14 13:34 run
+lrwxrwxrwx   1 root root     8 Mar 20 06:13 sbin -> usr/sbin
+drwxr-xr-x  21 root root  4096 Mar 27 12:27 snap
+drwxr-xr-x   2 root root  4096 Aug  9  2022 srv
+dr-xr-xr-x  13 root root     0 May 14 09:33 sys
+drwxrwxrwt  25 root root  4096 May 14 13:38 tmp
+drwxr-xr-x  14 root root  4096 Aug  9  2022 usr
+drwxr-xr-x  15 root root  4096 Mar 20 22:31 var
+
+where does our file exist?
+They exist on the home directory of the root directory. Wihtout the home directory, our files can exist in any directory and we can create a direcory for ourselves, anywhere in the root directory. However, having a directory called home, makes it user friendly. The difference is that in the home directory, it is created for the user to freely create directories and files witout permission. With the root directory, it requires permission. Which means an additional command must be attached to the mkdir cmd, known as sudo. 
+
+What is the sudo cmd?
+The sudo cmd allows a user with access authorization to the linux distro to have access to sensitive systems or permissions files. To use the sudo cmd, type in the following to the root directory:
+
+(mprodhan@mprodhan-XPS-15-9520:/$)
+'/': the root cmd
+mprodhan@mprodhan-XPS-15-9520:/$sudo mkdir dummy
+[sudo] password for mprodhan: (when you type your password here, you cannot see what you're typing because, it is for security purposes.)
+type the following cmd: ls -la
+result:
+
+mprodhan@mprodhan-XPS-15-9520:/$ ls -la
+total 96
+drwxr-xr-x  23 root root  4096 May 14 14:01 .
+drwxr-xr-x  23 root root  4096 May 14 14:01 ..
+lrwxrwxrwx   1 root root     7 Mar 20 06:13 bin -> usr/bin
+drwxr-xr-x   4 root root  4096 May  3 12:17 boot
+drwxrwxr-x   2 root root  4096 Mar 20 06:16 cdrom
+drwxr-xr-x  21 root root  5800 May 14 09:33 dev
+drwxr-xr-x   2 root root  4096 May 14 13:50 dummy
+drwxr-xr-x   2 root root  4096 May 14 13:51 dummy_m
+drwxr-xr-x 132 root root 12288 May 10 06:32 etc
+drwxr-xr-x   4 root root  4096 Mar 20 06:16 home
+DRWXR-XR-X   2 ROOT ROOT  4096 MAY 14 14:01 HOUSE_Pclo
+lrwxrwxrwx   1 root root     7 Mar 20 06:13 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Mar 20 06:13 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Mar 20 06:13 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Mar 20 06:13 libx32 -> usr/libx32
+drwx------   2 root root 16384 Mar 20 06:13 lost+found
+drwxr-xr-x   3 root root  4096 Mar 20 12:32 media
+drwxr-xr-x   2 root root  4096 Aug  9  2022 mnt
+drwxr-xr-x   2 root root  4096 Aug  9  2022 opt
+dr-xr-xr-x 441 root root     0 May 14 09:33 proc
+drwx------   5 root root  4096 Mar 20 07:00 root
+drwxr-xr-x  38 root root   980 May 14 13:34 run
+lrwxrwxrwx   1 root root     8 Mar 20 06:13 sbin -> usr/sbin
+drwxr-xr-x  21 root root  4096 Mar 27 12:27 snap
+drwxr-xr-x   2 root root  4096 Aug  9  2022 srv
+dr-xr-xr-x  13 root root     0 May 14 09:33 sys
+drwxrwxrwt  24 root root  4096 May 14 13:39 tmp
+drwxr-xr-x  14 root root  4096 Aug  9  2022 usr
+drwxr-xr-x  15 root root  4096 Mar 20 22:31 var
+
+
+ 
+

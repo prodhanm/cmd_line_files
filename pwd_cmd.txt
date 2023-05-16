@@ -1,0 +1,17 @@
+pwd cmd: This command displays the present working directory and its full path from the parent direcotry. Use the following command to find the full path aka pwd into the current directory. 
+
+type the following cmd:
+pwd
+
+ex: 
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/cmd_line_ref$ pwd
+/home/mprodhan/computer_codes/cmd_line_ref
+
+The breakdown of the path:
+The pwd displays the full path, starting from the parent directory into the current child directory. 
+
+The parent directory is /.
+The / is root direcotry, where the /home directory is housed on the / directory as its child. 
+/mprodhan is housed on the /home and is the child to /home.
+/computer_codes is a child of /home.
+/cmd_line_ref is a child of /computer_codes.

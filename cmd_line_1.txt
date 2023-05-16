@@ -1,0 +1,45 @@
+uname cmd line - This cmd line prints the computer's system information concerning, which kernel/OS is operating on the computer, which computer model, processor, memory, etc. 
+
+cmd: uname <optional cmd>
+result: Linux
+
+cmd: uname -a
+result: Linux mprodhan-XPS-15-9520 5.19.0-41-generic #42~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 18 17:40:00 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+break down by optional cmd:
+cmd: uname -a/--all
+result: see above
+
+cmd line: uname -s
+result: same as uname (see above)
+
+cmd line: uname -n
+result: Linux mprodhan-XPS-15-9520
+
+cmd line: uname -r
+result: 5.19.0-41-generic
+
+cmd line: uname -v
+result: #42~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 18 17:40:00 UTC 2
+
+cmd line: uname -m/-p/-i
+result: x86_64
+
+cmd line: uname -o
+result: GNU/Linux
+
+hostname cmd - Prints out which host is operating the OS. The result should be the computer and its model.
+
+cmd: hostname
+result: mprodhan-XPS-15-9520
+
+To further understand the cmd line cmd use, look up each command manual, using the man cmd.
+Type in man <cmd>.
+The above typing of the command will take you to the manual for a cmd. 
+
+ex: man tree or 
+man uname
+
+
+ref:
+cmd - command 

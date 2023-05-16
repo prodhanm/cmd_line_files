@@ -1,0 +1,62 @@
+ls cmd: ls stands for list, as in listing of directories and files. They display the child directories under the parent directories. 
+
+Type the following on a parent directory to get the full listings:
+
+ls <optional cmd> 
+
+When you type the ls cmd, the following should display. 
+
+mprodhan@mprodhan-XPS-15-9520:~$ ls
+computer_codes  Documents  Dummy                Music     Public  Templates
+Desktop         Downloads  important_documents  Pictures  snap    Videos
+
+each of the result below the ls cmd are directories. As mentioned mprodhan, as the user is the parent directory. The computer_codes, Documents, Dummy, Music, etc are child directories, that contain their own child directories, aka sub directories and files that are child output. 
+
+To know more about the ls cmd see the manual for ls: man ls
+
+Useful options to use to display files with more meta data: ls -l/a/la
+
+When you type ls -l, where l stands for long listing format. 
+
+For example, when you are on the home directory and you type ls -l:
+prodhan@mprodhan-XPS-15-9520:~$ ls -l
+total 48
+drwxrwxr-x 3 mprodhan mprodhan 4096 May 14 18:01 computer_codes
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Desktop
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Documents
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 09:12 Downloads
+drwxrwxrwx 2 mprodhan mprodhan 4096 Apr 18 19:25 Dummy
+drwxrwxr-x 2 mprodhan mprodhan 4096 May 14 19:12 important_documents
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Music
+drwxr-xr-x 3 mprodhan mprodhan 4096 Mar 20 22:38 Pictures
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Public
+drwx------ 7 mprodhan mprodhan 4096 Mar 20 08:11 snap
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Templates
+drwxr-xr-x 2 mprodhan mprodhan 4096 Mar 20 02:19 Videos
+
+When using this command you see the following from left to right:
+1. drwxrwxr-x is displaying that computer_codes is a directory with the permissions attached. 
+2. '3' means that computer_codes has three files, listed under it or its child directories. 
+3. mprodhan is the user who is assigned with the master user permissions and the second user also mprodhan, has secondary user permissions. 
+4. 4096 is the number of bytes space that it is currently using in its hard drive space. 
+5. to the right of the byte space is the date/time associated with when the directory was created.
+6. computer_codes is the child directory under mprodhan user directory.
+
+how about when I use ls -a:
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes$ ls -a
+.  ..  cmd_line_ref
+
+Here we see that when typing ls -a, you see the horizontal listing instead of the vertical detailed listing. The '.' stands for current directory, as in computer_codes and the '..' is used with cd to get to the parent directory to computer_codes, mprodhan. 
+
+Although I know that cmd_line_ref is a directory, since it does not have a file extension, it does not mean that it is not a file, as well. To ensure that you can see al of the hidden files and the directories associated files and child directories, use the ls -la cmd. 
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes$ ls -la
+total 12
+drwxrwxr-x  3 mprodhan mprodhan 4096 May 14 18:01 .
+drwxr-x--- 21 mprodhan mprodhan 4096 May 14 19:12 ..
+drwxrwxr-x  2 mprodhan mprodhan 4096 May 14 19:20 cmd_line_ref
+
+Now you can see that cmd_line_ref is indeed a directory by noting drwxrwxr-x from its far left meta data infomation.You also see that the hidden directories are showing.
+
+Now how can one switch directories?
+Use cd <name of directory> to switch directories. However, this is a tricky command and the cmd can only switch between child directories of the parent directories. This can also mean that the more complex the hierarchy of the directories from the parent to the child direcories, the greater is the need for understanding how the cd cmd is used. 

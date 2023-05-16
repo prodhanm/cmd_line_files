@@ -1,0 +1,30 @@
+mkdir cmd: This command builds directories/folders to hold files. Each directory acts as a level and each level can have its own directories along with files, populated or mixed to each other. Each directories will then have its own directories, in a possibility of endless levels. The best approach to building directories is to understand how each directory will populate the files and directories. 
+
+The significance of directories is a way to organize what each folder will hold and how to access them as data. They can be used casually by ensuring that access is simple for the user. For example, one can create a photo or picture directory. Then files associated with the directory as pictures, in .jpg or .png or .gif, etc.
+
+Directions:
+be sure to know which directory that you want to build from and find a way to that directory. 
+then type mkdir and the name that you are giivng to your directory.
+
+ex. I want to create a directory of important documents
+I will type the following:
+mkdir important_documents
+
+once you have typed mkdir <name of directory> and press enter, it will appear that nothing happened and that you are still on the directory from which you are building the directories. 
+
+mprodhan@mprodhan-XPS-15-9520:~$ mkdir important_documents
+
+In order to get to your built directory, type the following command:
+
+mprodhan@mprodhan-XPS-15-9520:~$ cd important_documents/
+
+Now the home folder has populated the important_documents directory:
+
+mprodhan@mprodhan-XPS-15-9520:~/important_documents$ 
+
+The difference between mkdir and cd is that the former creates directories and only creates it implicitly. Once the cmd is set with the document name, you can use the cd cmd to switch to that directory that you built using mkdir. 
+
+cd cmd: cd stands for change directory. It is used to switch between existing directories. If you are in a parent directory, you can switch to folders in that directory and to others under the parent directory. 
+
+how do I know that I have directories under the parent directory?
+use the ls cmd. (see the ls doc for instructions)

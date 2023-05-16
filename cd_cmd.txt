@@ -1,0 +1,16 @@
+cd cmd: This is known as the change directory (cd) cmd. A user can use this cmd to switch between child directories under a parent directory. It is a very tricky cmd, as the command does not skip around between parent directories, with backtracking to a directory to search for the user destination. The way to use this cmd is by:
+
+cd <child directory>/cd ../ or cd .
+
+To backtrack on a directory, use the following cmd:
+cd ../
+
+Each use of the above cmd, cd ../../../ means that each parent directory is being backtracked. The number of backtracks are unlimited and can be backtracked to the '/' directory. With a further understanding, cd ../ means, that a user is backtracking one parent directory. cd ../../ means that the user is gaing back two parent directories. 
+
+What is the relationship between backtracking and child directories?
+Each parent directory is a child of another parent directory. The cd command switches between child directories of a parent directory. The bactrack to a parent directory, still means that from a perspective point, the backtracked directory is a parent to its child directories. However, the parent directory may be a child directory to its parent directory. 
+
+what is the cd . cmd?
+That just signifies that the . is the current directory, which means that cd ., does not switch out to a directory and reamins on the directory. The reason for the use of '.', is due to how, it can be used as a short cut during software development or as a way to identfy a path on the current directory of its child directory or a file, for execution, or code wiring to another file in another directory or directory itself. 
+
+
