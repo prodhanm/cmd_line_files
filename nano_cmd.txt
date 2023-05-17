@@ -1,0 +1,22 @@
+nano cmd = The nano cmd comes from an app called nano. This app executes when typing nano and its associated file as its argument. When executing the cmd, the user is then taken to a screen that allows the user to input data into the file. The most commonly associated file with nano is .bashrc or .profile (as in bash profile). 
+
+The most important use case is the .bashrc, which is where the PATH var is housed and configured to locate an app associated with a cmd. This is where the apps configured to be located within a bin directory is placed for ease of use. 
+
+What's in the .bashrc file?
+
+Let's start with the cmd to get there:
+nano ~/.bashrc
+
+Type in the above cmd and the user will be on the .bashrc file. (see below)
+
+This is where the PATH var is located and configured:
+
+PATH="/usr/bin/python:
+      /home/mprodhan/.local/bin/poetry:${PATH}"
+export PATH
+alias python3=python
+
+The snippet above is an example of an app configuration for creating an alias to access current Python coding language. 
+
+Another major significance of the use of nano is that, a user can edit files used via nano. So the user does not have to only access .bashrc or .profile, as those are just configuration files. Think about this .txt file. Type nano nano_cmd.txt and the user is now on the nano_cmd.txt file and making edits to the file. 
+The usefulness of nano, is that it is a text editor in its own way. 
