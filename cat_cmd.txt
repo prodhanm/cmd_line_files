@@ -1,0 +1,11 @@
+cat cmd: cat stands for concatenation, which means to bind the data together, or files together. The use for this cmd is to add data to the end of the file. The best use case for cat cmd is the use of a list file. For example, you have a laundry list and each clothes are listed, however, there are some missing. Instead of using the nano cmd, to edit the list, and knowing what's on the list, the cat cmd is typed as such to add another item to the laundry list file. 
+
+The way to execute the cat cmd is as follows:
+
+cat > laundry_list.txt
+
+The reason for the use of the '>' sign is that, this sign allows the user to add to the laundry_list.txt file. The cat cmd will use the '>' to open laundry_list.txt and create a space on the terminal to add to the file and then the user can input an item. Then to exit, press ctrl + C to exit from laundry_list.txt back onto the cmd prompt. 
+
+Once a user is done inputing into the file, then the user can open the file to check if the input is on the file. 
+
+Another significance of the cat cmd is to combine the files together to one file with all inputs in one place. This is a huge and powerful way to combine inputs and data to get some useful results. 
