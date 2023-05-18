@@ -1,16 +1,102 @@
-cd cmd: This is known as the change directory (cd) cmd. A user can use this cmd to switch between child directories under a parent directory. It is a very tricky cmd, as the command does not skip around between parent directories, with backtracking to a directory to search for the user destination. The way to use this cmd is by:
+cd cmd: cd stands for change directory. It can be used to change between the child directories of the parent directories. The trick is to understand if you are in a parent directory or in its child directories. 
 
-cd <child directory>/cd ../ or cd .
+ex:
 
-To backtrack on a directory, use the following cmd:
-cd ../
+mprodhan
+├── computer_codes
+│   ├── cd_cmd.txt
+│   └── cmd_line_ref
+│       ├── cmd_line_1.txt
+│       ├── linux_root_directory.txt
+│       ├── ls_cmd.txt
+│       └── mkdir_cmd.txt
+├── Desktop
+├── Documents
+├── Downloads
+│   └── code_1.76.2-1678817801_amd64.deb
+├── Dummy
+│   ├── dummy2_file.txt
+│   ├── dummy_list.txt
+│   ├── dup.txt
+│   ├── error_log.txt
+│   ├── fam1.txt
+│   ├── fam_mem.txt
+│   ├── file2.cat
+│   ├── file*.txt
+│   ├── ls
+│   ├── num2.txt
+│   ├── num.txt
+│   ├── sort
+│   ├── sports.txt
+│   ├── statement.txt
+│   ├── the_xmen.txt
+│   └── xfiles.txt
+├── important_documents
+├── Music
+├── Pictures
+│   └── Screenshots
+│       └── Screenshot from 2023-03-20 22-38-16.png
+├── Public
+├── snap
+│   ├── code
+│   │   ├── 128
+│   │   ├── 129
+│   │   ├── common
+│   │   └── current -> 122
+│   ├── firefox
+│   │   ├── 2645
+│   │   ├── 2667
+│   │   ├── common
+│   │   └── current -> 2667
+│   ├── slack
+│   │   ├── 69
+│   │   ├── 71
+│   │   ├── common
+│   │   └── current -> 68
+│   ├── snapd-desktop-integration
+│   │   ├── 57
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── 83
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── common
+│   │   └── current -> 83
+│   └── snap-store
+│       ├── 638
+│       ├── common
+│       └── current -> 638
+├── Templates
+└── Videos
 
-Each use of the above cmd, cd ../../../ means that each parent directory is being backtracked. The number of backtracks are unlimited and can be backtracked to the '/' directory. With a further understanding, cd ../ means, that a user is backtracking one parent directory. cd ../../ means that the user is gaing back two parent directories. 
+52 directories, 25 files
 
-What is the relationship between backtracking and child directories?
-Each parent directory is a child of another parent directory. The cd command switches between child directories of a parent directory. The bactrack to a parent directory, still means that from a perspective point, the backtracked directory is a parent to its child directories. However, the parent directory may be a child directory to its parent directory. 
+Based on the exanple above, the parent directory is mprodhan, which is the user directory located on the root directory. There is no other directory above the root directory. 
 
-what is the cd . cmd?
-That just signifies that the . is the current directory, which means that cd ., does not switch out to a directory and reamins on the directory. The reason for the use of '.', is due to how, it can be used as a short cut during software development or as a way to identfy a path on the current directory of its child directory or a file, for execution, or code wiring to another file in another directory or directory itself. 
+How do I know, if I am on a parent directory?
+The rule of parent-child relationship to the directory structure is that:
+1. the / directory is always the parent directory. 
+2. Parent-child is a perspective. 
+   a. mprodhan is a parent directory to: 
+   computer_codes  Documents  Dummy                Music     Public  Templates
+   Desktop         Downloads  important_documents  Pictures  snap    Videos
+   
+   b. notice that computer_codes is a child directory to mprodhan directory, but it is a parent  to cmd_line_ref directory, making the latter a child of computer_codes. It is indeed a matter of perspective. 
+   
+To switch to a previous directory, use the cmd ls ../
+This switches from the child to its parent directory. Each use of cd ../../etc means that you are switching between top level directories up to the root directory. 
 
-
+To switch to home directory: cd ~
+To swtich to root directory: cd / 

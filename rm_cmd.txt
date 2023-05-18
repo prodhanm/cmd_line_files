@@ -1,0 +1,21 @@
+rm cmd: This is a very sensitive cmd. Unlike the gui aspect of file deletion is often a safe way to delete a file, by rerouting the file to a recycling bin or a trash can. This is to ensure that the file is preserved before deleting it from the trash can permanently. However, that is not the case for the rm cmd. 
+
+The rm cmd will permamently delete a file from the system. The file does not get rerouted to a trash can. Which means that the user must be precise and sure that a file to be deleted using the rm cmd will be used accordingly, or risk losing the contents forever. The cmd only deletes files from the directory that the file is located. 
+
+The way to use the rm cmd is as follows:
+
+rm -r <filename>
+
+Once using the cmd, the file will not display when using the ls cmd and when using the cmd above, there is not a pre-cautinary warning either. 
+
+Another use of the rm cmd is a concatenated cmd for directories known as rmdir. 
+
+However, this cmd does not remove the directory until the directory is empty. 
+
+What is the best use case for deleting all of the files in a directory?
+Use the following:
+rm -r <directory>
+
+This will delete both the files and the directory all at once, with the consequences of no warning. 
+
+rmdir <directory> is only best for directories that are empty and have no files at all. 
