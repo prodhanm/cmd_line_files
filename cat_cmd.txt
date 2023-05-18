@@ -62,3 +62,28 @@ mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat -n dummy.txt
      4	you 
      5	mam!
 
+Another way to use the cat cmd to create a new file, would be to number the items in the file, as in the use as is:
+cat -n > superheroes.txt. See below:
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat -n > superheroes.txt
+Superman
+Batman
+The Green Arrow
+The Flash
+SuperGirl 
+Robin
+The Black Canary
+The White Canary
+
+Here is the output of the cat superheroes.txt. See below:
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat superheroes.txt 
+     1	Superman
+     2	Batman
+     3	The Green Arrow
+     4	The Flash
+     5	SuperGirl
+     6	Robin
+     7	The Black Canary
+     8	The White Canary
+
