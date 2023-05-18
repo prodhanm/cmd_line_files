@@ -8,4 +8,57 @@ The reason for the use of the '>' sign is that, this sign allows the user to add
 
 Once a user is done inputing into the file, then the user can open the file to check if the input is on the file. 
 
-Another significance of the cat cmd is to combine the files together to one file with all inputs in one place. This is a huge and powerful way to combine inputs and data to get some useful results. 
+Another significance of the cat cmd is to combine the files together to one file with all inputs in one place. This is a huge and powerful way to combine inputs and data to get some useful results. This is where the best case use comes into play below:
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat dummy.txt dummy2.txt > dumdum.txt
+
+The syntax above translates as follows. The contents of dummy.txt and dummy2.txt are merging as one file as dumdum.txt, as the use of '>' redirects all information from both files into dumdum.txt.
+
+The output when opening up the file dumdum.txt is: 
+
+Wam
+bam
+thank 
+you 
+mam!
+I am a dummy. Don't talk to me cause, I am unresponsive. Why? Cause I am a dummy
+
+Let's take a look at file dummy1.txt:
+
+Wam
+bam
+thank 
+you 
+mam!
+
+Let's take a look at file dummy2.txt:
+
+I am a dummy. Don't talk to me cause, I am unresponsive. Why? Cause I am a dummy. 
+
+Another way to look at cat dummy.txt dummy2.txt > dumdum.txt is to see it this way:
+
+dummy.txt + dummy2.txt = dumdum.txt
+
+The plus sign being symbolic of concatenation. 
+
+Another aspect of the cat cmd is to look at the output of a file.
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat dumdum.txt 
+Wam
+bam
+thank 
+you 
+mam!
+I am a dummy. Don't talk to me cause, I am unresponsive. Why? Cause I am a dummy. 
+
+The use of cat cmd with the filename alone, or cat <filename>, will display what is on the file itself. It is useful, if the file is small or a small laundry list.
+
+Another neat use of cat cmd is to be able to number the contents of dummy.txt by the use of this aspect of cat cmd: cat -n dummy.txt. See below:
+
+mprodhan@mprodhan-XPS-15-9520:~/computer_codes/misc$ cat -n dummy.txt 
+     1	Wam
+     2	bam
+     3	thank 
+     4	you 
+     5	mam!
+
