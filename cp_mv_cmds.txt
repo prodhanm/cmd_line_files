@@ -1,0 +1,1 @@
+cp cmd: The copy cmd copies one file to the intended file. It does not move any contents of the file, so the original file is preserved. The best case usage is to be able to use macros on files as a way to copy a macro from one file to the intended file. 
