@@ -1,0 +1,101 @@
+The uniq cmd is used to omit repeated values or strings in a text or files with lists. 
+
+The cmd is invoked as such:
+    uniq <filename>
+    
+There are arguments that are useful to using the cmd, such as -c and -d.
+
+       -c, --count
+              prefix lines by the number of occurrences
+	The cmd above is combined with uniq as such: 
+	
+	uniq -c <filename>              
+	
+     The result of the cmd above is:
+	
+      1 	Atlanta
+      1 	Austin
+      2 	Boston
+      1 	Charlotte
+      1 	Chicago
+      1 	Columbus
+      2 	Dallas
+      2 	Denver
+      1 	El Paso
+      1 	Ft. Lauderdale
+      1 	Houston
+      2 	Las Vegas
+      1 	Los Angeles
+      3 	Miami
+      1 	New York City
+      1 	Orlando
+      1 	Philadelphia
+      1 	Pittsburgh
+      1 	Providence
+      1 	San Antonio
+      1 	St. Louis
+      1 	Washington, D.C.
+
+
+       -d, --repeated
+              only print duplicate lines, one for each group
+              
+      The cmd above is combined with uniq as such:
+      
+      uniq -d <filename>
+      
+      The result is as such:
+      
+      	Boston
+	Dallas
+	Denver
+	Las Vegas
+	Miami
+
+      
+     A similar command prints all of the duplicate lines instead of how results 
+     are with -d is with the following combined cmd:
+     
+     uniq -D <filename>
+     
+     The results are a such:
+     
+     	Boston
+	Boston
+	Dallas
+	Dallas
+	Denver
+	Denver
+	Las Vegas
+	Las Vegas
+	Miami
+	Miami
+	Miami
+	
+    Another useful combination of cmd lines give a result of all of the unique items
+    that are listed on the file once:
+    
+    uniq -u <filename>
+    
+    The results are as such:
+    
+    	Atlanta
+	Austin
+	Charlotte
+	Chicago
+	Columbus
+	El Paso
+	Ft. Lauderdale
+	Houston
+	Los Angeles
+	New York City
+	Orlando
+	Philadelphia
+	Pittsburgh
+	Providence
+	San Antonio
+	St. Louis
+	Washington, D.C.
+
+    
+

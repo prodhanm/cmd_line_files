@@ -1,0 +1,7 @@
+The sort cmd is used as a way to sort the contents of a file, particularly files that contain lists of contents in numeric or alpha-numeric order. 
+
+The sort cmd is used as such:
+    sort <filename>
+    
+This cmd's function is to enable sort via the first text that the cmd detects.
+ 
