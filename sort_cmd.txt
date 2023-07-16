@@ -4,4 +4,47 @@ The sort cmd is used as such:
     sort <filename>
     
 This cmd's function is to enable sort via the first text that the cmd detects.
- 
+It will sort via numerically, alphabetically or alphabumerically. 
+
+Other arguments that can combine with the cmd are as follows:
+
+One combination ignores leading blanks:
+	sort -b <filename>
+	
+The results are as such:
+
+	Atlanta
+	attica
+	Austin
+	Boston
+	Boston
+	Charlotte
+	Chicago
+	Columbus
+	Dallas
+	Dallas
+	Denver
+	Denver
+	El Paso
+	Ft. Lauderdale
+	Houston
+	Las Vegas
+	Las Vegas
+	Los Angeles
+	Miami
+	Miami
+	Miami
+	New York City
+	Orlando
+	Philadelphia
+	Pittsburgh
+	Providence
+	San Antonio
+	St. Louis
+	Washington, D.C.
+
+
+Another combination is synonimous for the sort cmd itself:
+	sort -d <filename>
+	
+
