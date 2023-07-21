@@ -47,4 +47,69 @@ The results are as such:
 Another combination is synonimous for the sort cmd itself:
 	sort -d <filename>
 	
+A way to reverse the sort, much like a reverse alphabetical order from z-a
+in any case, would be to use the -r argument:
+	sort -r <filename>
+	
+When it comes to sorting numbers, there is a numeric argument that will be able 
+to sort it:
+	sort -n <filename>
+For example, if a file contains an underorder lines of number:
+199.29
+199.10
+199.00
+0.99
+0.00
+5.39
+9.69
+
+When using the sort cmd withot the -n argument, the results are as such:
+0.00
+0.99
+199.00
+199.10
+199.29
+5.39
+9.69
+
+The cmd itself only sorts as it would sort alphabetically, via the first character
+of the file. Thus using the -n argument yields to the following result:
+0.00
+0.99
+5.39
+9.69
+199.00
+199.10
+199.29
+
+When accounting for a list that has duplicate values and to then count the duplicate
+values once, use the argument -u:
+	sort -u <filename>
+
+For example, lets say the contents in a file, names.txt has the following names:
+
+mustafa
+mustafa
+muhammad
+mohammad
+ahmed
+abbas
+waiz
+waiz
+toufalt
+leila
+leila
+sabba
+
+When using the -u argument, the results are as follows:
+
+abbas
+ahmed
+leila
+mohammad
+muhammad
+mustafa
+sabba
+toufalt
+waiz
 
